@@ -1,0 +1,205 @@
+:root {
+  --bg: #080a1a;
+  --bg-2: #111735;
+  --card: rgba(255, 255, 255, 0.06);
+  --stroke: rgba(255, 255, 255, 0.14);
+  --text: #f4f6fb;
+  --muted: #b2b8c8;
+  --accent: #d9ff5f;
+  --accent-ink: #171a07;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(90% 60% at 10% 0%, #222c60 0%, transparent 60%), var(--bg);
+  color: var(--text);
+}
+
+.app {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  background: linear-gradient(140deg, #2a2152, #1a2147);
+  border: 1px solid var(--stroke);
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 14px;
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.18em;
+  font-size: 12px;
+  color: #c5cbe0;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+h1 {
+  margin-top: 6px;
+}
+
+.muted {
+  color: var(--muted);
+  margin-top: 8px;
+}
+
+.balance-box {
+  min-width: 84px;
+  border: 1px solid var(--stroke);
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.balance-box span {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.tabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  margin-bottom: 12px;
+}
+
+.tab {
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 10px 14px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.tab.active {
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+}
+
+.panel {
+  background: linear-gradient(150deg, rgba(37, 49, 97, 0.5), rgba(15, 18, 32, 0.66));
+  border: 1px solid var(--stroke);
+  border-radius: 18px;
+  padding: 14px;
+  margin-bottom: 12px;
+}
+
+.hidden {
+  display: none;
+}
+
+.subtabs {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  margin-bottom: 10px;
+}
+
+.subtab {
+  border: 1px solid var(--stroke);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--text);
+  padding: 8px 10px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.subtab.active {
+  background: rgba(217, 255, 95, 0.2);
+  border-color: rgba(217, 255, 95, 0.55);
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--stroke);
+  border-radius: 14px;
+  padding: 12px;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.price {
+  border-radius: 999px;
+  background: rgba(217, 255, 95, 0.18);
+  border: 1px solid rgba(217, 255, 95, 0.4);
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 8px;
+  align-self: flex-start;
+}
+
+form {
+  display: grid;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+input, select, textarea, button {
+  font: inherit;
+}
+
+select, textarea {
+  border: 1px solid var(--stroke);
+  border-radius: 12px;
+  background: rgba(0, 0, 0, 0.25);
+  color: var(--text);
+  padding: 10px;
+}
+
+.primary {
+  border: none;
+  border-radius: 12px;
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  padding: 11px 14px;
+  cursor: pointer;
+}
+
+#resultBox img {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--stroke);
+}
+
+.result-empty {
+  color: var(--muted);
+}
+
+.result-meta {
+  margin-top: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.5;
+}

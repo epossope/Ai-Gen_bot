@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Studio Demo Mini App</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">AI STUDIO</p>
+          <h1>Public Demo</h1>
+          <p class="muted">Telegram bot + Mini App demo without production integrations.</p>
+        </div>
+        <div class="balance-box">
+          <span id="balanceValue">--</span>
+          <small>tokens</small>
+        </div>
+      </header>
+
+      <nav class="tabs" id="tabs">
+        <button class="tab active" data-tab="models">Models</button>
+        <button class="tab" data-tab="history">History</button>
+        <button class="tab" data-tab="cabinet">Cabinet</button>
+      </nav>
+
+      <section class="panel" id="modelsPanel">
+        <div class="subtabs" id="subtabs"></div>
+        <div id="modelsList" class="cards"></div>
+      </section>
+
+      <section class="panel hidden" id="historyPanel">
+        <h2>History</h2>
+        <div id="historyList" class="cards"></div>
+      </section>
+
+      <section class="panel hidden" id="cabinetPanel">
+        <h2>Cabinet</h2>
+        <p class="muted" id="cabinetUser"></p>
+        <p class="muted">Demo mode: no real payments and no real AI requests.</p>
+      </section>
+
+      <section class="panel">
+        <h2>Run Demo</h2>
+        <form id="generateForm">
+          <label for="modelSelect">Model</label>
+          <select id="modelSelect"></select>
+
+          <label for="modeSelect">Mode</label>
+          <select id="modeSelect">
+            <option value="generate">Generation</option>
+            <option value="edit">Editing</option>
+            <option value="stylize">Stylization</option>
+          </select>
+
+          <label for="promptInput">Prompt</label>
+          <textarea id="promptInput" rows="4" placeholder="Describe what to generate..."></textarea>
+          <button type="submit" class="primary">Run</button>
+        </form>
+      </section>
+
+      <section class="panel" id="resultPanel">
+        <h2>Result</h2>
+        <div id="resultBox" class="result-empty">No result yet.</div>
+      </section>
+    </div>
+
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <script src="./app.js" type="module"></script>
+  </body>
+  </html>
